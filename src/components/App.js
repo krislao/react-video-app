@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import SearchBar from "./SearchBar";
-import VideoDetails from "./video/Details";
-import VideoList from "./video/List";
+import VideoDetails from "./VideoDetail";
+import VideoList from "./VideoList";
 import youtube from "../apis/youtube";
 
 class App extends Component {
@@ -24,7 +24,7 @@ class App extends Component {
         <SearchBar onSubmit={this.onTermSubmit} />
         <div>
           <VideoDetails />
-          <VideoList />
+          <VideoList videos={this.state.videos} />
         </div>
       </div>
     );
