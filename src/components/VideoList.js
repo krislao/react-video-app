@@ -6,11 +6,7 @@ function VideoList({ videos }) {
     <VideoItem key={video.id.videoId} video={video} />
   ));
 
-  return (
-    <div>
-      <ul>{renderedList}</ul>
-    </div>
-  );
+  return <div className="ui relaxed divided list">{renderedList}</div>;
 }
 
 export default VideoList;
